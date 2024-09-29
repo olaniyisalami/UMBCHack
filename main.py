@@ -91,7 +91,8 @@ def choose_file():
 
 def run_main_train():
     subprocess.run(["python", "modelTrain.py"])
-
+if not os.path.exists('./trash'):
+    subprocess.run(["python", "modelTrain.py"])  
 root = tk.Tk()
 root.title("Image Classification GUI")
 
